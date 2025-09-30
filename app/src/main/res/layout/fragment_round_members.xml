@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:padding="16dp"
+    tools:context=".roundMembers">
+
+    <!-- Logo and Title Section -->
+    <LinearLayout
+        android:id="@+id/logoSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/rounds_logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ROUNDS"
+            android:textColor="@color/dark_purple"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <!-- Divider -->
+    <View
+        android:id="@+id/view4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@id/logoSection"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Group Name -->
+    <TextView
+        android:id="@+id/groupTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bali"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/view4"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Tab Layout -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@android:color/white"
+        app:tabIndicatorColor="@color/dark_purple"
+        app:tabSelectedTextColor="@color/dark_purple"
+        app:tabTextColor="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@id/groupTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Activity" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabManage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manage" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabMembers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Members" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <!-- RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewMembers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tabLayout"
+        app:layout_constraintBottom_toTopOf="@id/textDragDropInfo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Drag & Drop Info -->
+    <TextView
+        android:id="@+id/textDragDropInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*Drag and drop users to configure the payment order"
+        android:textColor="@color/turquoise"
+        android:textSize="14sp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/recyclerViewMembers"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Button Row -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/textDragDropInfo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/btnAddNewUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add New User"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/turquoise"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/btnInviteUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Invite"
+            android:textColor="@android:color/black"
+            android:backgroundTint="@color/mint_green"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

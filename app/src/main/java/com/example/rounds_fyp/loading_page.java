@@ -17,6 +17,12 @@ public class loading_page extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_loading_page);
+
+        // Hide ActionBar
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {

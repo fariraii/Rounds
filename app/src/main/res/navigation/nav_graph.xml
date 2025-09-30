@@ -2,25 +2,88 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph.xml"
+    android:id="@+id/nav_graph"
     app:startDestination="@id/homePage">
 
     <fragment
         android:id="@+id/homePage"
         android:name="com.example.rounds_fyp.homePage"
-        android:label="fragment_home_page"
+        android:label="Home"
         tools:layout="@layout/fragment_home_page" />
 
     <fragment
         android:id="@+id/roundsPage"
         android:name="com.example.rounds_fyp.roundsPage"
-        android:label="fragment_rounds_page"
+        android:label="Rounds"
         tools:layout="@layout/fragment_rounds_page" />
 
     <fragment
         android:id="@+id/profilePage"
         android:name="com.example.rounds_fyp.profilePage"
-        android:label="fragment_profile_page"
+        android:label="Profile"
         tools:layout="@layout/fragment_profile_page" />
+
+    <fragment
+        android:id="@+id/settings"
+        android:name="com.example.rounds_fyp.settings"
+        android:label="Settings"
+        tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:id="@+id/personalDetails"
+        android:name="com.example.rounds_fyp.personalDetails"
+        android:label="Personal Details"
+        tools:layout="@layout/fragment_personal_details" />
+
+    <fragment
+        android:id="@+id/faqPage"
+        android:name="com.example.rounds_fyp.faq_page"
+        android:label="FAQs"
+        tools:layout="@layout/fragment_faq_page" />
+
+    <fragment
+        android:id="@+id/activityInsights"
+        android:name="com.example.rounds_fyp.activityInsights"
+        android:label="Activity Insights"
+        tools:layout="@layout/fragment_activity_insights" />
+
+    <fragment
+        android:id="@+id/newRound"
+        android:name="com.example.rounds_fyp.newRound"
+        android:label="New Round"
+        tools:layout="@layout/fragment_new_round" />
+
+    <fragment
+        android:id="@+id/addMembersPage"
+        android:name="com.example.rounds_fyp.addUsers"
+        android:label="Add Members"
+        tools:layout="@layout/fragment_add_users" />
+
+    <fragment
+        android:id="@+id/withdraw"
+        android:name="com.example.rounds_fyp.withdraw"
+        android:label="Withdraw"
+        tools:layout="@layout/fragment_withdraw" />
+
+    <fragment
+        android:id="@+id/addContribution"
+        android:name="com.example.rounds_fyp.addContribution"
+        android:label="Add Contribution"
+        tools:layout="@layout/fragment_add_contribution" />
+
+    <fragment
+        android:id="@+id/joinGroup"
+        android:name="com.example.rounds_fyp.joinGroup"
+        android:label="Join Group"
+        tools:layout="@layout/fragment_join_group" />
+
+    <action
+        android:id="@+id/action_newRound_to_addMembersPage"
+        app:destination="@id/addMembersPage" />
+
+    <action
+        android:id="@+id/action_newRound_to_roundsPage"
+        app:destination="@id/roundsPage" />
+
 
 </navigation>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:background="?android:attr/selectableItemBackground">
+
+    <ImageView
+        android:id="@+id/memberIconImageView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/baseline_person_outline_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:tint="@color/dark_purple" />
+
+    <TextView
+        android:id="@+id/memberNameTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Member Name"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginStart="12dp"
+        app:layout_constraintStart_toEndOf="@id/memberIconImageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/removeMemberButton" />
+
+    <TextView
+        android:id="@+id/memberEmailTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="member@email.com"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="14sp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toEndOf="@id/memberIconImageView"
+        app:layout_constraintTop_toBottomOf="@id/memberNameTextView"
+        app:layout_constraintEnd_toStartOf="@id/removeMemberButton" />
+
+    <TextView
+        android:id="@+id/payoutOrderTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Payout order: #1"
+        android:textColor="@color/turquoise"
+        android:textSize="14sp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toEndOf="@id/memberIconImageView"
+        app:layout_constraintTop_toBottomOf="@id/memberEmailTextView" />
+
+    <Button
+        android:id="@+id/removeMemberButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/baseline_remove_circle_24"
+        android:backgroundTint="@color/dark_purple"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <ImageView
+        android:id="@+id/dragHandleImageView"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/baseline_drag_handle_24"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@id/removeMemberButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:tint="@android:color/darker_gray" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
