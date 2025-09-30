@@ -1,4 +1,4 @@
-# 🏥 Rounds — Final Year Project Android App
+# 🏥 Rounds App
 
 **Rounds** is an Android mobile application built with **Kotlin** and **Firebase**, developed as part of my Final Year Project.  
 The app demonstrates modern Android development practices, Firebase integration, and Material Design principles.
